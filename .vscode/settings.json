@@ -1,0 +1,61 @@
+{
+    "haskell.ghcMod.maxNumberOfProblems": {
+        "type": "number",
+        "default": 100,
+        "maximum": 100,
+        "description": "Controls the maximum number of problems reported."
+    },
+    "haskell.ghcMod.executablePath": {
+        "type": "string",
+        "default": "ghc-mod",
+        "description": "The full path to the ghc-mod executable, or 'stack' to use 'stack exec ghc-mod'."
+    },
+    "haskell.ghcMod.onHover": {
+        "type": "string",
+        "enum": [
+            "info",
+            "type",
+            "fallback",
+            "none"
+        ],
+        "default": "fallback",
+        "description": "Controls the onHover behavior. 'info' will display ghc-mod info, 'type' will display ghc-mod type, 'fallback' will try info and fallback to type,and 'none' will disable onHover tooltips."
+    },
+    "haskell.ghcMod.check": {
+        "type": "string",
+        "enum": [
+            "onSave",
+            "onChange",
+            "off"
+        ],
+        "default": "onSave",
+        "description": "Controls whether ghc-mod check is enabled or not and when it triggers. For 'onSave' is recommended."
+    },
+    "haskell.ghcMod.logLevel": {
+        "type": "string",
+        "enum": [
+            "none",
+            "log",
+            "info",
+            "warn",
+            "error"
+        ],
+        "default": "error",
+        "description": "Controls the verbosity of logging. Logs can be seen in an output channel called 'ghc-mod server' or the chrome dev tools."
+    },
+    "haskell.symbols.provider": {
+        "type": "string",
+        "enum": [
+            "none",
+            "fast-tags",
+            "hasktags"
+        ],
+        "default": "none",
+        "description": "Selects a symbol provider."
+    },
+    "haskell.symbols.executablePath": {
+        "type": "string",
+        "default": "",
+        "description": "Leave blank to use the default command for the selected provider (i.e. 'fast-tags'), otherwise set the full path to the executable. Extension may behave unexpectedly if the symbol provider setting is for a different command than the path provided."
+    }
+}

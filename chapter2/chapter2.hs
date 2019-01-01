@@ -33,7 +33,7 @@ baz :: Person -> String
 baz p@(Person n _ _) = "the name field of (" ++ show p ++ ") is " ++ n
 
 
-ex :: Integer
+ex :: Int
 ex = case "HELLo" of 
     [] -> 3
     ('H':s) -> length s
