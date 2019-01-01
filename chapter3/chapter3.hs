@@ -23,3 +23,9 @@ filterList _ E = E
 filterList p (C a b)
     | p a = C a (filterList p b)
     | otherwise = filterList p b
+
+-- data Maybe a = Nothing | Just a 
+
+safeHead :: [a] -> Maybe a
+safeHead [] = Nothing
+safeHead (x:xs) = Just x
